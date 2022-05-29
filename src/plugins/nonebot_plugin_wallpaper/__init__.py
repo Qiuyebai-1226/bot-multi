@@ -52,7 +52,7 @@ async def _(bot:Bot,event:GroupMessageEvent,args:Message = CommandArg()):
             logger.debug("获取失败")
             await wallpaper.finish("图片获取失败！")
 
-async def get_url(tags:str='') -> Optional[str]:
+async def get_url(tags:str='origional') -> Optional[str]:
    
     page = random.randint(0,100)
     url = 'https://danbooru.donmai.us/posts.json?page='+str(page)+'&tags='+tags
